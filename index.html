@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#102a43"><title>Track A — Learning Operations Command Center</title><link rel="stylesheet" href="./css/variables.css?v=darkfix6"><link rel="stylesheet" href="./css/layout.css?v=darkfix6"><link rel="stylesheet" href="./css/components.css?v=darkfix6"><link rel="stylesheet" href="./css/responsive.css?v=darkfix6"><link rel="stylesheet" href="./css/advanced.css?v=darkfix6"></head>
+<body>
+<div id="login" class="auth-shell"><form id="loginForm" class="auth-card"><div class="brand-mark">TA</div><h1>TRACK A</h1><p>Learning Operations Command Center</p><label>Portal password<input id="loginPassword" type="password" autocomplete="current-password" required></label><button class="btn primary" type="submit">Unlock Portal</button><p id="loginError" class="error" role="alert"></p><small>Static local-first portal. Authentication is client-side access control, not server-grade identity security.</small></form></div>
+<div id="app" class="app-shell hidden">
+<aside class="sidebar"><div class="brand"><span class="brand-mark small">TA</span><div><strong>TRACK A</strong><small>Learning Operations</small></div></div><nav id="nav" aria-label="Primary"></nav><div class="sidebar-foot"><span id="saveState" class="save-state">Saved</span><button id="lockPortal" class="btn ghost">Lock Portal</button></div></aside>
+<header class="topbar"><button id="menuBtn" class="icon-btn" aria-label="Toggle navigation">☰</button><div><h1 id="pageTitle">Command Center</h1><p id="pageSubtitle">Execution, evidence and readiness</p></div><div class="top-actions"><div class="theme-menu" aria-label="Theme selector">
+<button class="theme-trigger" type="button" aria-label="Choose theme" title="Choose theme">◐</button>
+<div class="theme-popover" role="group" aria-label="Themes">
+<button class="theme-btn active" data-theme="default" type="button">Classic</button>
+<button class="theme-btn" data-theme="ocean" type="button">Ocean</button>
+<button class="theme-btn" data-theme="forest" type="button">Forest</button>
+<button class="theme-btn" data-theme="warm" type="button">Warm</button>
+<button class="theme-btn" data-theme="night" type="button">Night</button>
+</div></div><span id="modeBadge" class="badge">DRAFT</span><button id="quickSession" class="btn primary">Start Focus Session</button></div></header>
+<main id="view" class="view" tabindex="-1"></main>
+<aside id="focusDock" class="focus-dock" aria-label="Focus clock">
+  <button id="focusDockToggle" class="focus-dock-handle" type="button" aria-label="Open focus clock">◷</button>
+  <div class="focus-dock-panel">
+    <div class="focus-dock-head"><div><span>FOCUS CLOCK</span><strong id="focusClock">25:00</strong></div><button id="focusDockClose" class="icon-btn" type="button">×</button></div>
+    <div class="focus-presets"><button data-focus-min="25" type="button">25m</button><button data-focus-min="50" type="button">50m</button><button data-focus-min="90" type="button">90m</button></div>
+    <div class="focus-actions"><button id="focusStart" class="btn primary" type="button">Start</button><button id="focusPause" class="btn" type="button">Pause</button><button id="focusReset" class="btn" type="button">Reset</button></div>
+<button id="deepFocusToggle" class="btn focus-wide" type="button">Enter Deep Focus</button>
+<label class="focus-objective">Distraction parking lot<input id="quickDistraction" type="text" placeholder="Capture it and return to study"></label>
+<div id="quickDistractionList" class="quick-distraction-list"></div>
+    <label class="focus-objective">Current objective<input id="focusObjective" type="text" placeholder="One clear outcome for this session"></label>
+    <blockquote id="focusQuote" class="focus-quote"></blockquote>
+    <button id="newQuote" class="quote-refresh" type="button">Another thought</button>
+  </div>
+</aside>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<div id="modalRoot"></div>
+<script src="./app.bundle.js?v=darkfix6"></script></body></html>

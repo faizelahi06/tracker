@@ -1,0 +1,247 @@
+[
+  {
+    "id": 1,
+    "category": "Networking fundamentals",
+    "question": "Explain how a packet travels between hosts on the same subnet."
+  },
+  {
+    "id": 2,
+    "category": "Networking fundamentals",
+    "question": "Explain how traffic reaches a remote subnet."
+  },
+  {
+    "id": 3,
+    "category": "Networking fundamentals",
+    "question": "Explain OSI encapsulation and what changes at each router hop."
+  },
+  {
+    "id": 4,
+    "category": "Networking fundamentals",
+    "question": "What is a subnet and why does segmentation matter?"
+  },
+  {
+    "id": 5,
+    "category": "TCP/IP",
+    "question": "Explain the TCP three-way handshake with sequence numbers."
+  },
+  {
+    "id": 6,
+    "category": "TCP/IP",
+    "question": "TCP vs UDP: choose one for DNS, voice, and file transfer."
+  },
+  {
+    "id": 7,
+    "category": "TCP/IP",
+    "question": "Explain retransmissions, duplicate ACKs, receive window and TIME_WAIT."
+  },
+  {
+    "id": 8,
+    "category": "TCP/IP",
+    "question": "How do MTU, MSS and PMTUD failures appear?"
+  },
+  {
+    "id": 9,
+    "category": "DNS",
+    "question": "Walk through recursive DNS resolution end to end."
+  },
+  {
+    "id": 10,
+    "category": "DNS",
+    "question": "Why can internal and public DNS return different answers?"
+  },
+  {
+    "id": 11,
+    "category": "DNS",
+    "question": "When does DNS use TCP?"
+  },
+  {
+    "id": 12,
+    "category": "DNS",
+    "question": "Troubleshoot: IP works but hostname does not."
+  },
+  {
+    "id": 13,
+    "category": "Routing",
+    "question": "Explain longest prefix match, AD and metric."
+  },
+  {
+    "id": 14,
+    "category": "Routing",
+    "question": "Why can forward traffic work while return traffic fails?"
+  },
+  {
+    "id": 15,
+    "category": "Routing",
+    "question": "Explain recursive next-hop lookup."
+  },
+  {
+    "id": 16,
+    "category": "Routing",
+    "question": "Design a floating static route."
+  },
+  {
+    "id": 17,
+    "category": "OSPF",
+    "question": "Neighbor is FULL but route is missing. Troubleshoot."
+  },
+  {
+    "id": 18,
+    "category": "OSPF",
+    "question": "What parameters must match for OSPF adjacency?"
+  },
+  {
+    "id": 19,
+    "category": "OSPF",
+    "question": "Explain DR/BDR and where it matters."
+  },
+  {
+    "id": 20,
+    "category": "OSPF",
+    "question": "Explain OSPF areas, ABR and ASBR."
+  },
+  {
+    "id": 21,
+    "category": "Switching",
+    "question": "Explain MAC learning, flooding and aging."
+  },
+  {
+    "id": 22,
+    "category": "Switching",
+    "question": "Diagnose a native VLAN mismatch."
+  },
+  {
+    "id": 23,
+    "category": "Switching",
+    "question": "Explain STP root election and port roles."
+  },
+  {
+    "id": 24,
+    "category": "Switching",
+    "question": "Where should PortFast and BPDU Guard be used?"
+  },
+  {
+    "id": 25,
+    "category": "Firewalls",
+    "question": "Stateful vs stateless filtering."
+  },
+  {
+    "id": 26,
+    "category": "Firewalls",
+    "question": "Policy allows traffic but app fails: what do you check?"
+  },
+  {
+    "id": 27,
+    "category": "Firewalls",
+    "question": "Explain asymmetric routing impact on a stateful firewall."
+  },
+  {
+    "id": 28,
+    "category": "Firewalls",
+    "question": "IDS vs IPS and deployment trade-offs."
+  },
+  {
+    "id": 29,
+    "category": "VPN",
+    "question": "IPsec tunnel is up but traffic fails. Troubleshoot."
+  },
+  {
+    "id": 30,
+    "category": "VPN",
+    "question": "Explain Phase 1 vs Phase 2 concepts."
+  },
+  {
+    "id": 31,
+    "category": "VPN",
+    "question": "How do selectors, routes, NAT and policy interact?"
+  },
+  {
+    "id": 32,
+    "category": "VPN",
+    "question": "Explain VPN MTU/MSS problems."
+  },
+  {
+    "id": 33,
+    "category": "TLS/PKI",
+    "question": "Explain certificate chain and hostname validation."
+  },
+  {
+    "id": 34,
+    "category": "TLS/PKI",
+    "question": "Walk through a modern TLS handshake."
+  },
+  {
+    "id": 35,
+    "category": "TLS/PKI",
+    "question": "TLS termination vs passthrough vs inspection."
+  },
+  {
+    "id": 36,
+    "category": "TLS/PKI",
+    "question": "What is Perfect Forward Secrecy?"
+  },
+  {
+    "id": 37,
+    "category": "Troubleshooting",
+    "question": "Website is slow for some users only. Build a test plan."
+  },
+  {
+    "id": 38,
+    "category": "Troubleshooting",
+    "question": "How do you distinguish DNS, TCP, TLS, proxy and app failures?"
+  },
+  {
+    "id": 39,
+    "category": "Troubleshooting",
+    "question": "Describe evidence-driven troubleshooting."
+  },
+  {
+    "id": 40,
+    "category": "Troubleshooting",
+    "question": "How do you write an RCA?"
+  },
+  {
+    "id": 41,
+    "category": "Incident response",
+    "question": "What do you do after discovering an infected host?"
+  },
+  {
+    "id": 42,
+    "category": "Incident response",
+    "question": "How do you preserve evidence while containing impact?"
+  },
+  {
+    "id": 43,
+    "category": "Incident response",
+    "question": "Build an incident timeline from logs and PCAP."
+  },
+  {
+    "id": 44,
+    "category": "Communication",
+    "question": "Explain an outage to a non-technical customer."
+  },
+  {
+    "id": 45,
+    "category": "Communication",
+    "question": "Give a concise escalation update with evidence and next action."
+  },
+  {
+    "id": 46,
+    "category": "Communication",
+    "question": "How do you communicate uncertainty without guessing?"
+  },
+  {
+    "id": 47,
+    "category": "Whiteboard scenarios",
+    "question": "Draw a branch-to-datacenter path and identify failure boundaries."
+  },
+  {
+    "id": 48,
+    "category": "Whiteboard scenarios",
+    "question": "Design user/server/DMZ/management segmentation."
+  },
+  {
+    "id": 49,
+    "category": "Whiteboard scenarios",
+    "question": "Whiteboard DNS \u2192 TCP \u2192 TLS \u2192 reverse proxy \u2192 application."
+  }
+]

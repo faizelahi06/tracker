@@ -1,0 +1,9 @@
+{
+  "name": "TRACK A Offline Production Drill Library",
+  "version": 1,
+  "packs": 20,
+  "drills_per_pack": 1200,
+  "total_drills": 24000,
+  "purpose": "Offline production troubleshooting, interview rehearsal, RCA practice, and future content expansion.",
+  "note": "These JSONL packs are static project assets. They contain no API keys, credentials, or executable code."
+}

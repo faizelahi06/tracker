@@ -1,0 +1,1356 @@
+[
+  {
+    "id": 1,
+    "stage": "01 Foundations",
+    "type": "Theory",
+    "topic": "LAN vs WAN",
+    "learn": "Scope, ownership, technologies and production examples",
+    "practice": "Draw office LAN → ISP → Internet → remote site",
+    "mastery": "Explain boundaries and failure domains",
+    "prerequisites": []
+  },
+  {
+    "id": 2,
+    "stage": "01 Foundations",
+    "type": "Theory",
+    "topic": "Internet vs Intranet",
+    "learn": "Public vs private services, routing and access boundaries",
+    "practice": "Map internal and public services",
+    "mastery": "Explain why internal does not automatically mean secure",
+    "prerequisites": [
+      1
+    ]
+  },
+  {
+    "id": 3,
+    "stage": "01 Foundations",
+    "type": "Theory",
+    "topic": "Client–Server and P2P",
+    "learn": "Roles, sockets and request/response behavior",
+    "practice": "Identify roles in browser, DNS and SMB flows",
+    "mastery": "Explain dependencies",
+    "prerequisites": [
+      2
+    ]
+  },
+  {
+    "id": 4,
+    "stage": "01 Foundations",
+    "type": "Theory",
+    "topic": "Traffic Delivery Models",
+    "learn": "Unicast, broadcast, multicast and anycast",
+    "practice": "Classify ARP, TCP, routing and CDN examples",
+    "mastery": "Choose correct model for a scenario",
+    "prerequisites": [
+      3
+    ]
+  },
+  {
+    "id": 5,
+    "stage": "01 Foundations",
+    "type": "Theory",
+    "topic": "Performance Fundamentals",
+    "learn": "Bandwidth, throughput, goodput, latency, jitter and loss",
+    "practice": "Compare application impact",
+    "mastery": "Diagnose the important metric for a scenario",
+    "prerequisites": [
+      4
+    ]
+  },
+  {
+    "id": 6,
+    "stage": "01 Foundations",
+    "type": "Theory",
+    "topic": "OSI and TCP/IP",
+    "learn": "Layer functions and practical troubleshooting use",
+    "practice": "Map DNS, TCP, IP and Ethernet",
+    "mastery": "Trace a failure by layer",
+    "prerequisites": [
+      5
+    ]
+  },
+  {
+    "id": 7,
+    "stage": "01 Foundations",
+    "type": "Theory",
+    "topic": "Encapsulation",
+    "learn": "Headers/trailers and decapsulation",
+    "practice": "Draw HTTP → TCP → IP → Ethernet",
+    "mastery": "Explain what changes at router hops",
+    "prerequisites": [
+      6
+    ]
+  },
+  {
+    "id": 8,
+    "stage": "02 IPv4 & Subnetting",
+    "type": "Theory",
+    "topic": "IPv4 Structure",
+    "learn": "Network/host portions and address types",
+    "practice": "Classify sample addresses",
+    "mastery": "Explain local vs remote decision",
+    "prerequisites": [
+      7
+    ]
+  },
+  {
+    "id": 9,
+    "stage": "02 IPv4 & Subnetting",
+    "type": "Theory",
+    "topic": "Binary and Bitwise AND",
+    "learn": "Binary conversion and mask operation",
+    "practice": "10 conversions + 5 AND exercises",
+    "mastery": "Derive network ID",
+    "prerequisites": [
+      8
+    ]
+  },
+  {
+    "id": 10,
+    "stage": "02 IPv4 & Subnetting",
+    "type": "Theory",
+    "topic": "Subnet Mask and CIDR",
+    "learn": "Prefix length and address capacity",
+    "practice": "Convert masks ↔ CIDR",
+    "mastery": "Explain /24 vs /27 operationally",
+    "prerequisites": [
+      9
+    ]
+  },
+  {
+    "id": 11,
+    "stage": "02 IPv4 & Subnetting",
+    "type": "Theory",
+    "topic": "Network/Broadcast/Host Range",
+    "learn": "Calculate subnet boundaries",
+    "practice": "15 mixed CIDR problems",
+    "mastery": "Solve arbitrary subnet accurately",
+    "prerequisites": [
+      10
+    ]
+  },
+  {
+    "id": 12,
+    "stage": "02 IPv4 & Subnetting",
+    "type": "Theory",
+    "topic": "Special Address Ranges",
+    "learn": "Private, public, loopback, link-local and multicast concepts",
+    "practice": "Classify addresses",
+    "mastery": "Explain APIPA symptoms",
+    "prerequisites": [
+      11
+    ]
+  },
+  {
+    "id": 13,
+    "stage": "02 IPv4 & Subnetting",
+    "type": "Theory",
+    "topic": "FLSM and VLSM",
+    "learn": "Efficient address allocation",
+    "practice": "Design departmental addressing",
+    "mastery": "Avoid overlap and waste",
+    "prerequisites": [
+      12
+    ]
+  },
+  {
+    "id": 14,
+    "stage": "02 IPv4 & Subnetting",
+    "type": "Theory",
+    "topic": "Route Summarization",
+    "learn": "Aggregation and trade-offs",
+    "practice": "Summarize contiguous prefixes",
+    "mastery": "Explain bad-summary black-hole risk",
+    "prerequisites": [
+      13
+    ]
+  },
+  {
+    "id": 15,
+    "stage": "02 IPv4 & Subnetting",
+    "type": "Gate",
+    "topic": "SUBNETTING GATE",
+    "learn": "Prove subnetting mastery before routing",
+    "practice": "Timed set with 90%+ accuracy",
+    "mastery": "Solve without guessing",
+    "prerequisites": [
+      14
+    ]
+  },
+  {
+    "id": 16,
+    "stage": "03 Ethernet, MAC & ARP",
+    "type": "Theory",
+    "topic": "Ethernet Frame",
+    "learn": "MAC fields, EtherType, payload, FCS and MTU relation",
+    "practice": "Inspect one frame in Wireshark",
+    "mastery": "Explain important fields",
+    "prerequisites": [
+      15
+    ]
+  },
+  {
+    "id": 17,
+    "stage": "03 Ethernet, MAC & ARP",
+    "type": "Theory",
+    "topic": "MAC Learning",
+    "learn": "Learning, forwarding, filtering, flooding and aging",
+    "practice": "Observe MAC table before/after traffic",
+    "mastery": "Predict forwarding behavior",
+    "prerequisites": [
+      16
+    ]
+  },
+  {
+    "id": 18,
+    "stage": "03 Ethernet, MAC & ARP",
+    "type": "Theory",
+    "topic": "Unknown Unicast & Broadcast",
+    "learn": "Flooding behavior and scope",
+    "practice": "Predict egress ports",
+    "mastery": "Explain flooding vs broadcasting",
+    "prerequisites": [
+      17
+    ]
+  },
+  {
+    "id": 19,
+    "stage": "03 Ethernet, MAC & ARP",
+    "type": "Theory",
+    "topic": "ARP Request/Reply",
+    "learn": "IPv4-to-MAC resolution",
+    "practice": "Capture ARP exchange",
+    "mastery": "Explain broadcast request/unicast reply",
+    "prerequisites": [
+      18
+    ]
+  },
+  {
+    "id": 20,
+    "stage": "03 Ethernet, MAC & ARP",
+    "type": "Theory",
+    "topic": "Local vs Remote Delivery",
+    "learn": "ARP for destination vs gateway",
+    "practice": "Capture local and remote traffic",
+    "mastery": "Explain remote IP with gateway MAC",
+    "prerequisites": [
+      19
+    ]
+  },
+  {
+    "id": 21,
+    "stage": "03 Ethernet, MAC & ARP",
+    "type": "Theory",
+    "topic": "ARP Cache & Duplicate IP",
+    "learn": "Cache lifecycle, GARP and common failures",
+    "practice": "Clear cache and observe rebuild",
+    "mastery": "Diagnose stale ARP/duplicate IP",
+    "prerequisites": [
+      20
+    ]
+  },
+  {
+    "id": 22,
+    "stage": "03 Ethernet, MAC & ARP",
+    "type": "Gate",
+    "topic": "L2 DELIVERY GATE",
+    "learn": "Prove frame and ARP reasoning",
+    "practice": "Whiteboard local and remote flows",
+    "mastery": "Explain every MAC/IP decision",
+    "prerequisites": [
+      21
+    ]
+  },
+  {
+    "id": 23,
+    "stage": "04 Switching & VLANs",
+    "type": "Theory",
+    "topic": "Switch Forwarding",
+    "learn": "Ingress lookup, source learning and egress decision",
+    "practice": "Predict from MAC table",
+    "mastery": "Troubleshoot unknown destination",
+    "prerequisites": [
+      22
+    ]
+  },
+  {
+    "id": 24,
+    "stage": "04 Switching & VLANs",
+    "type": "Theory",
+    "topic": "Interfaces & Counters",
+    "learn": "State, speed, duplex, CRC and drops",
+    "practice": "Inspect interface counters",
+    "mastery": "Relate errors to likely causes",
+    "prerequisites": [
+      23
+    ]
+  },
+  {
+    "id": 25,
+    "stage": "04 Switching & VLANs",
+    "type": "Theory",
+    "topic": "VLAN Segmentation",
+    "learn": "Logical broadcast domains",
+    "practice": "Design user/server/management VLANs",
+    "mastery": "Explain VLAN vs security policy",
+    "prerequisites": [
+      24
+    ]
+  },
+  {
+    "id": 26,
+    "stage": "04 Switching & VLANs",
+    "type": "Theory",
+    "topic": "Access Ports",
+    "learn": "Untagged endpoint connectivity",
+    "practice": "Configure two access VLANs",
+    "mastery": "Verify membership/connectivity",
+    "prerequisites": [
+      25
+    ]
+  },
+  {
+    "id": 27,
+    "stage": "04 Switching & VLANs",
+    "type": "Theory",
+    "topic": "802.1Q Trunks",
+    "learn": "Tagging, native VLAN and allowed list",
+    "practice": "Configure and verify trunk",
+    "mastery": "Diagnose missing VLAN/native mismatch",
+    "prerequisites": [
+      26
+    ]
+  },
+  {
+    "id": 28,
+    "stage": "04 Switching & VLANs",
+    "type": "Theory",
+    "topic": "Router-on-a-Stick",
+    "learn": "Subinterfaces and inter-VLAN routing",
+    "practice": "Build small ROAS topology",
+    "mastery": "Trace VLAN 10 → VLAN 20",
+    "prerequisites": [
+      27
+    ]
+  },
+  {
+    "id": 29,
+    "stage": "04 Switching & VLANs",
+    "type": "Theory",
+    "topic": "SVIs & L3 Switching",
+    "learn": "Gateway SVIs and routed switching",
+    "practice": "Compare SVI with ROAS",
+    "mastery": "Choose design for scenario",
+    "prerequisites": [
+      28
+    ]
+  },
+  {
+    "id": 30,
+    "stage": "04 Switching & VLANs",
+    "type": "Gate",
+    "topic": "VLAN GATE",
+    "learn": "Prove VLAN/trunk/gateway understanding",
+    "practice": "Build 2 VLANs and routing",
+    "mastery": "Find wrong VLAN/trunk/gateway fault",
+    "prerequisites": [
+      29
+    ]
+  },
+  {
+    "id": 31,
+    "stage": "05 STP & L2 Redundancy",
+    "type": "Theory",
+    "topic": "Layer 2 Loops",
+    "learn": "Storms, duplicates and MAC instability",
+    "practice": "Draw triangle and predict behavior",
+    "mastery": "Explain why TTL does not stop L2 loop",
+    "prerequisites": [
+      30
+    ]
+  },
+  {
+    "id": 32,
+    "stage": "05 STP & L2 Redundancy",
+    "type": "Theory",
+    "topic": "Root Bridge Election",
+    "learn": "Bridge ID and election",
+    "practice": "Calculate sample elections",
+    "mastery": "Predict root",
+    "prerequisites": [
+      31
+    ]
+  },
+  {
+    "id": 33,
+    "stage": "05 STP & L2 Redundancy",
+    "type": "Theory",
+    "topic": "Port Roles",
+    "learn": "Root, designated and alternate ports",
+    "practice": "Calculate roles on topology",
+    "mastery": "Explain forwarding/blocking",
+    "prerequisites": [
+      32
+    ]
+  },
+  {
+    "id": 34,
+    "stage": "05 STP & L2 Redundancy",
+    "type": "Theory",
+    "topic": "RSTP Convergence",
+    "learn": "Roles, states and topology changes",
+    "practice": "Observe link-failure convergence",
+    "mastery": "Explain reconvergence",
+    "prerequisites": [
+      33
+    ]
+  },
+  {
+    "id": 35,
+    "stage": "05 STP & L2 Redundancy",
+    "type": "Theory",
+    "topic": "PortFast & BPDU Guard",
+    "learn": "Edge optimization and protection",
+    "practice": "Configure where supported",
+    "mastery": "Explain correct placement",
+    "prerequisites": [
+      34
+    ]
+  },
+  {
+    "id": 36,
+    "stage": "05 STP & L2 Redundancy",
+    "type": "Theory",
+    "topic": "Root Guard & Loop Guard",
+    "learn": "Protection objectives",
+    "practice": "Map feature to scenario",
+    "mastery": "Choose correct protection",
+    "prerequisites": [
+      35
+    ]
+  },
+  {
+    "id": 37,
+    "stage": "05 STP & L2 Redundancy",
+    "type": "Theory",
+    "topic": "EtherChannel",
+    "learn": "Bundling and STP interaction",
+    "practice": "Build/diagram bundled uplink",
+    "mastery": "Explain parallel-link behavior",
+    "prerequisites": [
+      36
+    ]
+  },
+  {
+    "id": 38,
+    "stage": "06 Routing Fundamentals",
+    "type": "Theory",
+    "topic": "Routing Table",
+    "learn": "Prefix, next hop, interface, source and metric",
+    "practice": "Read Windows/Linux/Cisco tables",
+    "mastery": "Explain selected route",
+    "prerequisites": [
+      37
+    ]
+  },
+  {
+    "id": 39,
+    "stage": "06 Routing Fundamentals",
+    "type": "Theory",
+    "topic": "Route Types",
+    "learn": "Connected, local, static and default",
+    "practice": "Build small route table",
+    "mastery": "Choose correct route type",
+    "prerequisites": [
+      38
+    ]
+  },
+  {
+    "id": 40,
+    "stage": "06 Routing Fundamentals",
+    "type": "Theory",
+    "topic": "Longest Prefix Match",
+    "learn": "Forwarding selection",
+    "practice": "Solve competing-route cases",
+    "mastery": "Predict selected route",
+    "prerequisites": [
+      39
+    ]
+  },
+  {
+    "id": 41,
+    "stage": "06 Routing Fundamentals",
+    "type": "Theory",
+    "topic": "Recursive Lookup",
+    "learn": "Next-hop reachability",
+    "practice": "Trace recursive resolution",
+    "mastery": "Diagnose unusable route",
+    "prerequisites": [
+      40
+    ]
+  },
+  {
+    "id": 42,
+    "stage": "06 Routing Fundamentals",
+    "type": "Theory",
+    "topic": "AD vs Metric",
+    "learn": "Source trust vs path preference",
+    "practice": "Compare candidate routes",
+    "mastery": "Explain distinction correctly",
+    "prerequisites": [
+      41
+    ]
+  },
+  {
+    "id": 43,
+    "stage": "06 Routing Fundamentals",
+    "type": "Theory",
+    "topic": "Static Route Variants",
+    "learn": "Floating, host and summary routes",
+    "practice": "Configure examples",
+    "mastery": "Choose route for scenario",
+    "prerequisites": [
+      42
+    ]
+  },
+  {
+    "id": 44,
+    "stage": "06 Routing Fundamentals",
+    "type": "Theory",
+    "topic": "Forward & Return Path",
+    "learn": "Bidirectional reachability and asymmetry",
+    "practice": "Draw both directions",
+    "mastery": "Diagnose missing return route",
+    "prerequisites": [
+      43
+    ]
+  },
+  {
+    "id": 45,
+    "stage": "06 Routing Fundamentals",
+    "type": "Gate",
+    "topic": "ROUTING GATE",
+    "learn": "Prove route-selection reasoning",
+    "practice": "10 selection/return-path cases",
+    "mastery": "Explain path with evidence",
+    "prerequisites": [
+      44
+    ]
+  },
+  {
+    "id": 46,
+    "stage": "07 Dynamic Routing & OSPF",
+    "type": "Theory",
+    "topic": "Dynamic Routing Models",
+    "learn": "Convergence, IGP/EGP, DV/LS/PV",
+    "practice": "Compare RIP/EIGRP/OSPF/BGP roles",
+    "mastery": "Choose protocol category",
+    "prerequisites": [
+      45
+    ]
+  },
+  {
+    "id": 47,
+    "stage": "07 Dynamic Routing & OSPF",
+    "type": "Theory",
+    "topic": "OSPF Operation",
+    "learn": "LSDB and SPF concepts",
+    "practice": "Draw hello-to-route flow",
+    "mastery": "Explain OSPF metric basis",
+    "prerequisites": [
+      46
+    ]
+  },
+  {
+    "id": 48,
+    "stage": "07 Dynamic Routing & OSPF",
+    "type": "Theory",
+    "topic": "Router ID & Neighbors",
+    "learn": "Identity and hello process",
+    "practice": "Inspect neighbors",
+    "mastery": "Diagnose RID issue conceptually",
+    "prerequisites": [
+      47
+    ]
+  },
+  {
+    "id": 49,
+    "stage": "07 Dynamic Routing & OSPF",
+    "type": "Theory",
+    "topic": "Adjacency Requirements",
+    "learn": "Matching parameters and states",
+    "practice": "Observe state transitions",
+    "mastery": "Infer mismatch from state",
+    "prerequisites": [
+      48
+    ]
+  },
+  {
+    "id": 50,
+    "stage": "07 Dynamic Routing & OSPF",
+    "type": "Theory",
+    "topic": "Cost & Reference Bandwidth",
+    "learn": "Metric calculation",
+    "practice": "Calculate sample costs",
+    "mastery": "Explain reference bandwidth issue",
+    "prerequisites": [
+      49
+    ]
+  },
+  {
+    "id": 51,
+    "stage": "07 Dynamic Routing & OSPF",
+    "type": "Theory",
+    "topic": "Areas and Roles",
+    "learn": "Area 0, ABR and ASBR",
+    "practice": "Draw multi-area design",
+    "mastery": "Identify roles",
+    "prerequisites": [
+      50
+    ]
+  },
+  {
+    "id": 52,
+    "stage": "07 Dynamic Routing & OSPF",
+    "type": "Theory",
+    "topic": "DR/BDR",
+    "learn": "Multi-access optimization",
+    "practice": "Predict election",
+    "mastery": "Explain where it matters",
+    "prerequisites": [
+      51
+    ]
+  },
+  {
+    "id": 53,
+    "stage": "07 Dynamic Routing & OSPF",
+    "type": "Theory",
+    "topic": "Passive & Default Advertisement",
+    "learn": "Control-plane exposure and route injection",
+    "practice": "Configure/verify",
+    "mastery": "Explain passive behavior",
+    "prerequisites": [
+      52
+    ]
+  },
+  {
+    "id": 54,
+    "stage": "07 Dynamic Routing & OSPF",
+    "type": "Theory",
+    "topic": "OSPF Troubleshooting",
+    "learn": "Area, timers, auth, MTU, passive, RID, advertisement",
+    "practice": "Build symptom/evidence/cause matrix",
+    "mastery": "Troubleshoot FULL neighbor but no route",
+    "prerequisites": [
+      53
+    ]
+  },
+  {
+    "id": 55,
+    "stage": "07 Dynamic Routing & OSPF",
+    "type": "Gate",
+    "topic": "OSPF GATE",
+    "learn": "Build and break small OSPF domain",
+    "practice": "Inject 3 faults and recover",
+    "mastery": "Explain evidence for each cause",
+    "prerequisites": [
+      54
+    ]
+  },
+  {
+    "id": 56,
+    "stage": "08 TCP, UDP & ICMP",
+    "type": "Theory",
+    "topic": "TCP Header & Flags",
+    "learn": "Ports, seq/ack, flags, window and options",
+    "practice": "Inspect SYN packet",
+    "mastery": "Explain fields",
+    "prerequisites": [
+      55
+    ]
+  },
+  {
+    "id": 57,
+    "stage": "08 TCP, UDP & ICMP",
+    "type": "Theory",
+    "topic": "Three-Way Handshake",
+    "learn": "SYN, SYN-ACK, ACK and ISNs",
+    "practice": "Capture handshake",
+    "mastery": "Explain seq/ack progression",
+    "prerequisites": [
+      56
+    ]
+  },
+  {
+    "id": 58,
+    "stage": "08 TCP, UDP & ICMP",
+    "type": "Theory",
+    "topic": "Reliability",
+    "learn": "ACKs, retransmission, duplicate ACK and ordering",
+    "practice": "Inspect retransmission",
+    "mastery": "Differentiate loss symptoms",
+    "prerequisites": [
+      57
+    ]
+  },
+  {
+    "id": 59,
+    "stage": "08 TCP, UDP & ICMP",
+    "type": "Theory",
+    "topic": "Flow Control",
+    "learn": "Receive window, scaling and zero window",
+    "practice": "Inspect window values",
+    "mastery": "Explain receiver-limited flow",
+    "prerequisites": [
+      58
+    ]
+  },
+  {
+    "id": 60,
+    "stage": "08 TCP, UDP & ICMP",
+    "type": "Theory",
+    "topic": "Connection Closing",
+    "learn": "FIN, TIME_WAIT, CLOSE_WAIT and RST",
+    "practice": "Capture graceful/abrupt close",
+    "mastery": "Identify who closed",
+    "prerequisites": [
+      59
+    ]
+  },
+  {
+    "id": 61,
+    "stage": "08 TCP, UDP & ICMP",
+    "type": "Theory",
+    "topic": "UDP",
+    "learn": "Header, connectionless behavior and app reliability",
+    "practice": "Capture DNS UDP",
+    "mastery": "Explain TCP/UDP trade-offs",
+    "prerequisites": [
+      60
+    ]
+  },
+  {
+    "id": 62,
+    "stage": "08 TCP, UDP & ICMP",
+    "type": "Theory",
+    "topic": "ICMP",
+    "learn": "Echo, unreachable, time exceeded and packet-too-big",
+    "practice": "Capture ping/traceroute",
+    "mastery": "Explain diagnostic limits",
+    "prerequisites": [
+      61
+    ]
+  },
+  {
+    "id": 63,
+    "stage": "08 TCP, UDP & ICMP",
+    "type": "Theory",
+    "topic": "TTL & Traceroute",
+    "learn": "Hop limit and path inference",
+    "practice": "Run and interpret traceroute",
+    "mastery": "Avoid overclaiming failure point",
+    "prerequisites": [
+      62
+    ]
+  },
+  {
+    "id": 64,
+    "stage": "08 TCP, UDP & ICMP",
+    "type": "Theory",
+    "topic": "MTU, MSS & PMTUD",
+    "learn": "Fragmentation and black-hole symptoms",
+    "practice": "Test packet size behavior",
+    "mastery": "Recognize VPN MTU issue",
+    "prerequisites": [
+      63
+    ]
+  },
+  {
+    "id": 65,
+    "stage": "08 TCP, UDP & ICMP",
+    "type": "Gate",
+    "topic": "TRANSPORT GATE",
+    "learn": "Analyze handshake, data and close/failure",
+    "practice": "Build packet timeline",
+    "mastery": "Explain evidence and uncertainty",
+    "prerequisites": [
+      64
+    ]
+  },
+  {
+    "id": 66,
+    "stage": "09 Core Services",
+    "type": "Theory",
+    "topic": "DNS Resolution Path",
+    "learn": "Stub, recursive, root, TLD and authoritative roles",
+    "practice": "Trace with dig/nslookup",
+    "mastery": "Explain resolution path",
+    "prerequisites": [
+      65
+    ]
+  },
+  {
+    "id": 67,
+    "stage": "09 Core Services",
+    "type": "Theory",
+    "topic": "DNS Records",
+    "learn": "A, AAAA, CNAME, MX, TXT, NS, SOA, PTR, SRV, CAA",
+    "practice": "Inspect record chain",
+    "mastery": "Choose correct record",
+    "prerequisites": [
+      66
+    ]
+  },
+  {
+    "id": 68,
+    "stage": "09 Core Services",
+    "type": "Theory",
+    "topic": "DNS Transport & Cache",
+    "learn": "UDP/TCP 53, TTL, negative cache and EDNS concept",
+    "practice": "Compare cached/uncached query",
+    "mastery": "Explain TCP use cases",
+    "prerequisites": [
+      67
+    ]
+  },
+  {
+    "id": 69,
+    "stage": "09 Core Services",
+    "type": "Theory",
+    "topic": "Enterprise DNS",
+    "learn": "Internal, public and split DNS",
+    "practice": "Draw answer paths",
+    "mastery": "Diagnose different answers",
+    "prerequisites": [
+      68
+    ]
+  },
+  {
+    "id": 70,
+    "stage": "09 Core Services",
+    "type": "Theory",
+    "topic": "DNS Forwarding",
+    "learn": "Forwarders and conditional forwarding",
+    "practice": "Diagram chain",
+    "mastery": "Find failure points",
+    "prerequisites": [
+      69
+    ]
+  },
+  {
+    "id": 71,
+    "stage": "09 Core Services",
+    "type": "Theory",
+    "topic": "DHCP DORA",
+    "learn": "Discover, Offer, Request, ACK and lease lifecycle",
+    "practice": "Capture/inspect exchange",
+    "mastery": "Explain startup flow",
+    "prerequisites": [
+      70
+    ]
+  },
+  {
+    "id": 72,
+    "stage": "09 Core Services",
+    "type": "Theory",
+    "topic": "DHCP Enterprise Design",
+    "learn": "Scopes, reservations, options and relay",
+    "practice": "Design two-subnet service",
+    "mastery": "Explain relay need",
+    "prerequisites": [
+      71
+    ]
+  },
+  {
+    "id": 73,
+    "stage": "09 Core Services",
+    "type": "Theory",
+    "topic": "NTP",
+    "learn": "Drift, stratum and service/security impact",
+    "practice": "Compare clocks/sources",
+    "mastery": "Explain Kerberos/cert/log impact",
+    "prerequisites": [
+      72
+    ]
+  },
+  {
+    "id": 74,
+    "stage": "09 Core Services",
+    "type": "Gate",
+    "topic": "SERVICES GATE",
+    "learn": "Troubleshoot name, address and time failures",
+    "practice": "Solve 3 fault scenarios",
+    "mastery": "Prove cause with evidence",
+    "prerequisites": [
+      73
+    ]
+  },
+  {
+    "id": 75,
+    "stage": "10 NAT",
+    "type": "Theory",
+    "topic": "NAT Purpose",
+    "learn": "Translation terminology and limits",
+    "practice": "Draw original/translated tuples",
+    "mastery": "Explain NAT vs firewall",
+    "prerequisites": [
+      74
+    ]
+  },
+  {
+    "id": 76,
+    "stage": "10 NAT",
+    "type": "Theory",
+    "topic": "Static/Dynamic NAT & PAT",
+    "learn": "Mapping models",
+    "practice": "Compare translation tables",
+    "mastery": "Choose correct model",
+    "prerequisites": [
+      75
+    ]
+  },
+  {
+    "id": 77,
+    "stage": "10 NAT",
+    "type": "Theory",
+    "topic": "SNAT, DNAT & Port Forwarding",
+    "learn": "Source/destination changes",
+    "practice": "Trace inbound/outbound flows",
+    "mastery": "Explain both directions",
+    "prerequisites": [
+      76
+    ]
+  },
+  {
+    "id": 78,
+    "stage": "10 NAT",
+    "type": "Theory",
+    "topic": "Return Translation",
+    "learn": "Reverse mapping and state",
+    "practice": "Draw return path",
+    "mastery": "Diagnose missing return traffic",
+    "prerequisites": [
+      77
+    ]
+  },
+  {
+    "id": 79,
+    "stage": "10 NAT",
+    "type": "Theory",
+    "topic": "Hairpin & Overlap",
+    "learn": "NAT edge cases",
+    "practice": "Diagram cases",
+    "mastery": "Explain failed assumptions",
+    "prerequisites": [
+      78
+    ]
+  },
+  {
+    "id": 80,
+    "stage": "10 NAT",
+    "type": "Gate",
+    "topic": "NAT GATE",
+    "learn": "Policy correct but app fails",
+    "practice": "Test NAT, route, listener and host firewall",
+    "mastery": "Identify exact dependency",
+    "prerequisites": [
+      79
+    ]
+  },
+  {
+    "id": 81,
+    "stage": "11 HTTP, HTTPS & TLS",
+    "type": "Theory",
+    "topic": "HTTP",
+    "learn": "Methods, headers, Host, status codes and persistence",
+    "practice": "Inspect with curl",
+    "mastery": "Interpret response correctly",
+    "prerequisites": [
+      80
+    ]
+  },
+  {
+    "id": 82,
+    "stage": "11 HTTP, HTTPS & TLS",
+    "type": "Theory",
+    "topic": "Proxy & Load Balancer",
+    "learn": "Frontend/backend flow and boundaries",
+    "practice": "Draw client → proxy/LB → app",
+    "mastery": "Differentiate 502/503/504",
+    "prerequisites": [
+      81
+    ]
+  },
+  {
+    "id": 83,
+    "stage": "11 HTTP, HTTPS & TLS",
+    "type": "Theory",
+    "topic": "TLS Purpose & Validation",
+    "learn": "Confidentiality, integrity, chain and hostname",
+    "practice": "Inspect certificate",
+    "mastery": "Explain browser validation",
+    "prerequisites": [
+      82
+    ]
+  },
+  {
+    "id": 84,
+    "stage": "11 HTTP, HTTPS & TLS",
+    "type": "Theory",
+    "topic": "TLS Handshake",
+    "learn": "Negotiation, certificate, key agreement and session keys",
+    "practice": "Inspect handshake metadata",
+    "mastery": "Explain key establishment",
+    "prerequisites": [
+      83
+    ]
+  },
+  {
+    "id": 85,
+    "stage": "11 HTTP, HTTPS & TLS",
+    "type": "Theory",
+    "topic": "TLS Deployment Models",
+    "learn": "Termination, passthrough and inspection",
+    "practice": "Draw 3 models",
+    "mastery": "Discuss trade-offs",
+    "prerequisites": [
+      84
+    ]
+  },
+  {
+    "id": 86,
+    "stage": "11 HTTP, HTTPS & TLS",
+    "type": "Gate",
+    "topic": "HTTPS GATE",
+    "learn": "TCP 443 works but site fails",
+    "practice": "Separate DNS/TCP/TLS/proxy/app",
+    "mastery": "Locate failing layer",
+    "prerequisites": [
+      85
+    ]
+  },
+  {
+    "id": 87,
+    "stage": "12 Firewalls & Security",
+    "type": "Theory",
+    "topic": "Stateless vs Stateful",
+    "learn": "Packet rules vs session tracking",
+    "practice": "Draw state behavior",
+    "mastery": "Explain return traffic",
+    "prerequisites": [
+      86
+    ]
+  },
+  {
+    "id": 88,
+    "stage": "12 Firewalls & Security",
+    "type": "Theory",
+    "topic": "Zones & Policy Matching",
+    "learn": "Source, destination, service, action and order",
+    "practice": "Design LAN/DMZ/Server/Management policy",
+    "mastery": "Explain implicit deny",
+    "prerequisites": [
+      87
+    ]
+  },
+  {
+    "id": 89,
+    "stage": "12 Firewalls & Security",
+    "type": "Theory",
+    "topic": "Logging & Policy Hits",
+    "learn": "Evidence and limitations",
+    "practice": "Interpret log fields",
+    "mastery": "Prove firewall processed flow",
+    "prerequisites": [
+      88
+    ]
+  },
+  {
+    "id": 90,
+    "stage": "12 Firewalls & Security",
+    "type": "Theory",
+    "topic": "Firewall + NAT",
+    "learn": "Policy/translation dependencies",
+    "practice": "Trace both",
+    "mastery": "Diagnose policy-vs-NAT issue",
+    "prerequisites": [
+      89
+    ]
+  },
+  {
+    "id": 91,
+    "stage": "12 Firewalls & Security",
+    "type": "Theory",
+    "topic": "Asymmetric Routing",
+    "learn": "Stateful path dependency",
+    "practice": "Draw asymmetric path",
+    "mastery": "Explain dropped return traffic",
+    "prerequisites": [
+      90
+    ]
+  },
+  {
+    "id": 92,
+    "stage": "12 Firewalls & Security",
+    "type": "Theory",
+    "topic": "IDS vs IPS",
+    "learn": "Passive vs inline detection/prevention",
+    "practice": "Place sensors",
+    "mastery": "Discuss tuning and false positives",
+    "prerequisites": [
+      91
+    ]
+  },
+  {
+    "id": 93,
+    "stage": "12 Firewalls & Security",
+    "type": "Theory",
+    "topic": "DDoS Detection",
+    "learn": "Baselines, rates, SYN patterns and upstream mitigation",
+    "practice": "Create detection checklist",
+    "mastery": "Explain mitigation boundary",
+    "prerequisites": [
+      92
+    ]
+  },
+  {
+    "id": 94,
+    "stage": "12 Firewalls & Security",
+    "type": "Gate",
+    "topic": "FIREWALL GATE",
+    "learn": "Design and troubleshoot segmentation",
+    "practice": "Allow required, deny unnecessary, verify logs",
+    "mastery": "Explain rule/state/NAT effects",
+    "prerequisites": [
+      93
+    ]
+  },
+  {
+    "id": 95,
+    "stage": "13 VPN & IPsec",
+    "type": "Theory",
+    "topic": "VPN Types",
+    "learn": "Site-to-site vs remote access",
+    "practice": "Draw both",
+    "mastery": "Choose correct model",
+    "prerequisites": [
+      94
+    ]
+  },
+  {
+    "id": 96,
+    "stage": "13 VPN & IPsec",
+    "type": "Theory",
+    "topic": "IKE / Phase 1 Concepts",
+    "learn": "Peer authentication and secure control channel",
+    "practice": "Diagram negotiation",
+    "mastery": "Explain mismatch categories",
+    "prerequisites": [
+      95
+    ]
+  },
+  {
+    "id": 97,
+    "stage": "13 VPN & IPsec",
+    "type": "Theory",
+    "topic": "IPsec / Phase 2 Concepts",
+    "learn": "SAs, selectors and protected traffic",
+    "practice": "Draw selectors",
+    "mastery": "Explain P1 up/P2 failure",
+    "prerequisites": [
+      96
+    ]
+  },
+  {
+    "id": 98,
+    "stage": "13 VPN & IPsec",
+    "type": "Theory",
+    "topic": "Routing, NAT & Policy",
+    "learn": "Tunnel path dependencies",
+    "practice": "Trace protected flow",
+    "mastery": "Diagnose tunnel-up/no-traffic",
+    "prerequisites": [
+      97
+    ]
+  },
+  {
+    "id": 99,
+    "stage": "13 VPN & IPsec",
+    "type": "Theory",
+    "topic": "VPN MTU/MSS",
+    "learn": "Encapsulation overhead",
+    "practice": "Analyze overhead impact",
+    "mastery": "Recognize partial failures",
+    "prerequisites": [
+      98
+    ]
+  },
+  {
+    "id": 100,
+    "stage": "13 VPN & IPsec",
+    "type": "Gate",
+    "topic": "VPN GATE",
+    "learn": "Tunnel up but app unreachable",
+    "practice": "Check selectors, route, NAT, policy, return and MTU",
+    "mastery": "Present evidence-driven diagnosis",
+    "prerequisites": [
+      99
+    ]
+  },
+  {
+    "id": 101,
+    "stage": "14 Packet Analysis",
+    "type": "Theory",
+    "topic": "Capture Placement",
+    "learn": "Choose interface and observation point",
+    "practice": "Draw client/firewall/server capture points",
+    "mastery": "Explain visibility limits",
+    "prerequisites": [
+      100
+    ]
+  },
+  {
+    "id": 102,
+    "stage": "14 Packet Analysis",
+    "type": "Theory",
+    "topic": "Capture vs Display Filters",
+    "learn": "Collection vs analysis filters",
+    "practice": "Write host/port/protocol filters",
+    "mastery": "Avoid filtering evidence away",
+    "prerequisites": [
+      101
+    ]
+  },
+  {
+    "id": 103,
+    "stage": "14 Packet Analysis",
+    "type": "Theory",
+    "topic": "Protocol Flow Analysis",
+    "learn": "ARP, ICMP, DNS, TCP and TLS metadata",
+    "practice": "Build packet timeline",
+    "mastery": "Identify abnormal sequence",
+    "prerequisites": [
+      102
+    ]
+  },
+  {
+    "id": 104,
+    "stage": "14 Packet Analysis",
+    "type": "Theory",
+    "topic": "PCAP + Log Correlation",
+    "learn": "Combine timing across sources",
+    "practice": "Create unified timeline",
+    "mastery": "State what each source proves",
+    "prerequisites": [
+      103
+    ]
+  },
+  {
+    "id": 105,
+    "stage": "14 Packet Analysis",
+    "type": "Gate",
+    "topic": "PCAP GATE",
+    "learn": "Investigate mixed capture",
+    "practice": "Write findings",
+    "mastery": "Separate fact, inference and uncertainty",
+    "prerequisites": [
+      104
+    ]
+  },
+  {
+    "id": 106,
+    "stage": "15 Production Troubleshooting",
+    "type": "Theory",
+    "topic": "Symptom & Scope",
+    "learn": "Exact impact and boundaries",
+    "practice": "Rewrite vague incidents precisely",
+    "mastery": "Ask high-value triage questions",
+    "prerequisites": [
+      105
+    ]
+  },
+  {
+    "id": 107,
+    "stage": "15 Production Troubleshooting",
+    "type": "Theory",
+    "topic": "Last Known Good & Changes",
+    "learn": "Timeline and change correlation",
+    "practice": "Create incident timeline",
+    "mastery": "Avoid assuming latest change is root cause",
+    "prerequisites": [
+      106
+    ]
+  },
+  {
+    "id": 108,
+    "stage": "15 Production Troubleshooting",
+    "type": "Theory",
+    "topic": "Dependency Mapping",
+    "learn": "DNS, route, firewall, TLS, service and backend",
+    "practice": "Draw app dependency chain",
+    "mastery": "Select efficient test order",
+    "prerequisites": [
+      107
+    ]
+  },
+  {
+    "id": 109,
+    "stage": "15 Production Troubleshooting",
+    "type": "Theory",
+    "topic": "Layered Evidence Checks",
+    "learn": "L1→L2→L3→DNS→transport→firewall/NAT→TLS→app",
+    "practice": "Build evidence checklist",
+    "mastery": "Avoid random command guessing",
+    "prerequisites": [
+      108
+    ]
+  },
+  {
+    "id": 110,
+    "stage": "15 Production Troubleshooting",
+    "type": "Theory",
+    "topic": "Hypothesis Testing",
+    "learn": "Prediction, evidence and controlled test",
+    "practice": "Write 3 hypotheses for same symptom",
+    "mastery": "Eliminate causes logically",
+    "prerequisites": [
+      109
+    ]
+  },
+  {
+    "id": 111,
+    "stage": "15 Production Troubleshooting",
+    "type": "Theory",
+    "topic": "Low-Risk Fix & Validation",
+    "learn": "Rollback, validation and monitoring",
+    "practice": "Write mini change plan",
+    "mastery": "Prove restoration",
+    "prerequisites": [
+      110
+    ]
+  },
+  {
+    "id": 112,
+    "stage": "15 Production Troubleshooting",
+    "type": "Theory",
+    "topic": "RCA",
+    "learn": "Timeline, trigger, root cause and corrective actions",
+    "practice": "Write simulated RCA",
+    "mastery": "Separate symptom, cause and fix",
+    "prerequisites": [
+      111
+    ]
+  },
+  {
+    "id": 113,
+    "stage": "15 Production Troubleshooting",
+    "type": "Gate",
+    "topic": "TROUBLESHOOTING GATE",
+    "learn": "Solve timed multi-layer incident",
+    "practice": "Document evidence → hypothesis → fix → validation",
+    "mastery": "Defend reasoning",
+    "prerequisites": [
+      112
+    ]
+  }
+]

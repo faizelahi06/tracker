@@ -1,0 +1,184 @@
+[
+  {
+    "id": 1,
+    "name": "DNS resolution failure",
+    "context": "Enterprise production environment",
+    "complaint": "Users can reach 10.20.30.40 but app.internal.example fails.",
+    "symptoms": "Client has correct IP and gateway; DNS timeout appears.",
+    "evidence": [
+      "ipconfig /all shows DNS 10.10.10.53",
+      "nslookup times out",
+      "ping 10.10.10.53 succeeds"
+    ],
+    "rootCause": "Conditional forwarder points to retired DNS server."
+  },
+  {
+    "id": 2,
+    "name": "Wrong VLAN",
+    "context": "Enterprise production environment",
+    "complaint": "A newly moved workstation cannot reach its gateway.",
+    "symptoms": "Link is up; DHCP fails; neighbors on adjacent desks work.",
+    "evidence": [
+      "Switchport operational mode: access",
+      "Access VLAN: 30",
+      "Expected user VLAN: 20"
+    ],
+    "rootCause": "Access port assigned to VLAN 30 instead of VLAN 20."
+  },
+  {
+    "id": 3,
+    "name": "Trunk allowed-list problem",
+    "context": "Enterprise production environment",
+    "complaint": "One VLAN works across the uplink; another does not.",
+    "symptoms": "Local same-VLAN traffic works on both switches.",
+    "evidence": [
+      "show interfaces trunk: VLAN 40 absent from allowed list",
+      "STP forwarding for VLAN 40 locally"
+    ],
+    "rootCause": "VLAN 40 missing from trunk allowed list."
+  },
+  {
+    "id": 4,
+    "name": "STP path issue",
+    "context": "Enterprise production environment",
+    "complaint": "Traffic takes an unexpected path after a topology change.",
+    "symptoms": "No complete outage, but latency and uplink utilization changed.",
+    "evidence": [
+      "Root bridge changed after maintenance",
+      "Lower-priority access switch became root"
+    ],
+    "rootCause": "Incorrect STP root priority caused suboptimal tree."
+  },
+  {
+    "id": 5,
+    "name": "Missing return route",
+    "context": "Enterprise production environment",
+    "complaint": "Client SYN reaches server but no SYN-ACK returns to client.",
+    "symptoms": "Server is listening and local clients connect.",
+    "evidence": [
+      "Server capture shows SYN",
+      "Gateway route table lacks client subnet"
+    ],
+    "rootCause": "Return route to client subnet is missing."
+  },
+  {
+    "id": 6,
+    "name": "OSPF neighbor mismatch",
+    "context": "Enterprise production environment",
+    "complaint": "Two routers remain in INIT/EXSTART and do not reach FULL.",
+    "symptoms": "Physical link and IP connectivity are good.",
+    "evidence": [
+      "Hello/dead timers differ",
+      "Area IDs match"
+    ],
+    "rootCause": "OSPF hello/dead timer mismatch."
+  },
+  {
+    "id": 7,
+    "name": "OSPF FULL but route missing",
+    "context": "Enterprise production environment",
+    "complaint": "Adjacency is FULL but a remote LAN is absent.",
+    "symptoms": "Transit networks are reachable.",
+    "evidence": [
+      "show ip ospf neighbor FULL",
+      "Remote LAN interface is passive but network statement missing"
+    ],
+    "rootCause": "Remote LAN is not advertised into OSPF."
+  },
+  {
+    "id": 8,
+    "name": "Firewall policy issue",
+    "context": "Enterprise production environment",
+    "complaint": "TCP handshake never completes across a security zone.",
+    "symptoms": "Routing and NAT appear correct.",
+    "evidence": [
+      "Firewall log shows deny on rule 17",
+      "Rule 17 precedes intended allow rule"
+    ],
+    "rootCause": "Earlier deny rule shadows intended allow policy."
+  },
+  {
+    "id": 9,
+    "name": "NAT translation issue",
+    "context": "Enterprise production environment",
+    "complaint": "Published service is unreachable from Internet.",
+    "symptoms": "Firewall allow rule hits; backend works internally.",
+    "evidence": [
+      "DNAT maps public IP to wrong private IP",
+      "No SYN on real backend"
+    ],
+    "rootCause": "DNAT target address is incorrect."
+  },
+  {
+    "id": 10,
+    "name": "TLS certificate problem",
+    "context": "Enterprise production environment",
+    "complaint": "Browser warns on an otherwise reachable HTTPS site.",
+    "symptoms": "TCP 443 and TLS negotiation start successfully.",
+    "evidence": [
+      "Certificate SAN lacks requested hostname",
+      "Certificate is otherwise within validity dates"
+    ],
+    "rootCause": "Hostname mismatch in certificate SAN."
+  },
+  {
+    "id": 11,
+    "name": "Reverse proxy 502/503/504",
+    "context": "Enterprise production environment",
+    "complaint": "Users receive 502 from the frontend.",
+    "symptoms": "Frontend TLS is healthy.",
+    "evidence": [
+      "Proxy log: connection refused to 10.0.5.20:8080",
+      "Backend process listens on 127.0.0.1:8080"
+    ],
+    "rootCause": "Backend only bound to loopback."
+  },
+  {
+    "id": 12,
+    "name": "VPN tunnel up but traffic fails",
+    "context": "Enterprise production environment",
+    "complaint": "IKE/IPsec SAs are established but application traffic fails.",
+    "symptoms": "Tunnel counters do not increase for target subnet.",
+    "evidence": [
+      "Local selector 10.1.0.0/16",
+      "Peer expects 10.1.20.0/24"
+    ],
+    "rootCause": "Traffic selector mismatch."
+  },
+  {
+    "id": 13,
+    "name": "MTU/MSS issue",
+    "context": "Enterprise production environment",
+    "complaint": "Small pings and login work, large transfers stall over VPN.",
+    "symptoms": "No obvious loss on underlay.",
+    "evidence": [
+      "DF ping fails above 1372 bytes",
+      "TCP retransmissions on large segments"
+    ],
+    "rootCause": "Tunnel overhead causes PMTU/MSS black-hole behavior."
+  },
+  {
+    "id": 14,
+    "name": "DHCP relay failure",
+    "context": "Enterprise production environment",
+    "complaint": "Clients in one VLAN get APIPA; other VLANs receive leases.",
+    "symptoms": "DHCP server is healthy.",
+    "evidence": [
+      "SVI VLAN 50 has no helper address",
+      "Broadcast Discover visible only in VLAN 50"
+    ],
+    "rootCause": "Missing DHCP relay/helper configuration."
+  },
+  {
+    "id": 15,
+    "name": "Clock skew affecting authentication",
+    "context": "Enterprise production environment",
+    "complaint": "Users cannot authenticate to domain services after time drift.",
+    "symptoms": "Network reachability and DNS are healthy.",
+    "evidence": [
+      "Client clock differs by 11 minutes",
+      "Kerberos errors mention clock skew"
+    ],
+    "rootCause": "NTP failure caused excessive clock skew."
+  }
+]

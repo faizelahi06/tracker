@@ -1,0 +1,6 @@
+export const el=(tag,attrs={},...kids)=>{const n=document.createElement(tag);for(const[k,v]of Object.entries(attrs)){if(k==='class')n.className=v;else if(k.startsWith('on'))n.addEventListener(k.slice(2).toLowerCase(),v);else if(k==='text')n.textContent=v;else n.setAttribute(k,v)}for(const k of kids.flat())n.append(k?.nodeType?k:document.createTextNode(k??''));return n};
+export function toast(msg){const t=document.querySelector('#toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
+export function modal(title,content,actions=[]){const root=document.querySelector('#modalRoot'),back=el('div',{class:'modal-backdrop'}),m=el('div',{class:'modal'}),head=el('div',{class:'modal-head'},el('h2',{text:title}),el('button',{class:'btn',onClick:()=>back.remove(),text:'Close'}));m.append(head,content);if(actions.length){const bar=el('div',{class:'toolbar'});for(const a of actions)bar.append(el('button',{class:`btn ${a.kind||''}`,onClick:async()=>{await a.run(back);},text:a.label}));m.append(bar)}back.append(m);root.append(back);return back}
+export function card(title,content,className=''){const c=el('section',{class:`card ${className}`});if(title)c.append(el('h2',{text:title}));c.append(content);return c}
+export function empty(text){return el('div',{class:'empty',text})}
+export function safeText(v){return String(v??'')}

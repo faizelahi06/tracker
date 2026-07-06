@@ -1,0 +1,6 @@
+import {put,getAll} from './db.js';
+const intervals=[1,3,7,14,30,60,90];
+const addDays=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)};
+export async function scheduleFirst(topicId){const all=await getAll('reviews');if(all.some(r=>r.topicId===topicId&&r.status==='due'))return;await put('reviews',{topicId,dueDate:addDays(new Date(),1),result:'',status:'due',round:1,createdAt:new Date().toISOString()})}
+export async function recordReview(review,result){const factor={Forgot:.25,Weak:.5,Partial:1,Strong:1.7}[result]||1;review.result=result;review.status='done';review.completedAt=new Date().toISOString();await put('reviews',review);const nextRound=Math.min((review.round||1)+1,intervals.length);const base=intervals[nextRound-1];await put('reviews',{topicId:review.topicId,dueDate:addDays(new Date(),Math.max(1,Math.round(base*factor))),result:'',status:'due',round:nextRound,createdAt:new Date().toISOString()})}
+export function buckets(reviews){const today=new Date().toISOString().slice(0,10);return {due:reviews.filter(r=>r.status==='due'&&r.dueDate===today),overdue:reviews.filter(r=>r.status==='due'&&r.dueDate<today),upcoming:reviews.filter(r=>r.status==='due'&&r.dueDate>today).sort((a,b)=>a.dueDate.localeCompare(b.dueDate))}}
